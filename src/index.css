@@ -1,5 +1,4 @@
 /* src/styles.css */
-
 /* Reset some default styles */
 body, h1, h2, h3, p {
   margin: 0;
@@ -13,42 +12,70 @@ body, h1, h2, h3, p {
 }
 
 .app-header {
-  background-color: #333;
-  color: white;
-  padding: 1rem 0;
+  background-color: white;
+  color: #f3f3f3;
+  padding: 0.25rem 0;
+  font-size: 1rem;
+  font-weight: normal; /* Remove bold styling */
+  font-family: Arial, sans-serif; /* Set the font to Arial */
+  height: 60px;
 }
 
 .app-content {
+  background-color: #f3f3f3;
   padding: 2rem;
 }
 
 /* Kanban board layout */
 .board {
+  background-color: #f3f3f3;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
-/* Card styling */
 .card {
-  background-color: #f9f9f9;
+  font-family: "Arial", Arial, sans-serif;
+  text-align: left;
+  background-color: white;
   border: 1px solid #ccc;
-  padding: 2rem; /* Increase the padding for more height */
-  border-radius: 8px; /* Increase the border-radius for a more curved appearance */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust the box-shadow */
+  padding: 1rem; /* Adjust the padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
-  margin-bottom: 1.5rem; /* Add margin between cards */
+  margin-bottom: 1.5rem;
+  height: 125px; /* Set a fixed height for the card */
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
   transform: translateY(-4px);
 }
 
-/* Grouping and sorting options layout */
-.grouping-options,
-.sorting-options {
-  margin-bottom: 1.5rem;
+.card:hover {
+  transform: translateY(-4px);
 }
+
+
+/* Grouping and sorting options layout */
+.grouping-options {
+  display: flex;
+  align-items: center;
+}
+
+.grouping-label {
+  margin-right: 10px; /* Adjust the margin-right value to your preference */
+}
+.sorting-options {
+  display: flex;
+  align-items: center;
+}
+
+.ordering-label {
+  margin-right: 10px; /* Adjust the margin-right value to your preference */
+}
+
 
 /* Group label styling */
 .group-label {
@@ -64,7 +91,16 @@ select {
 
 /* Header styling */
 h1 {
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Heading styling */
+h2 {
+  font-weight: normal; /* Remove bold font weight */
+  font-family: Arial, sans-serif; /* Use Arial font family */
+  font-size: 18px; /* Adjust the font size */
+  margin-bottom: 1rem; /* Add some spacing below the headings */
 }
 
 /* Footer styling */
@@ -77,13 +113,14 @@ footer {
   top: 20px; /* Adjust this value to control the distance from the top */
   left: 20px; /* Adjust this value to control the distance from the left */
   z-index: 1000; /* Ensure the button appears above other content */
-  width: 100px; /* Adjust the width */
-  height: 30px; /* Adjust the height */
+  width: 130px; /* Adjust the width */
+  height: 40px; /* Adjust the height */
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 4px 8px;
   cursor: pointer;
+  font-size: medium;
 }
 
 /* Style the dropdown options */
@@ -93,10 +130,84 @@ footer {
   padding: 1rem;
   border-radius: 8px;
   position: absolute;
-  top: 50px; /* Adjust this value to control the distance from the top */
-  left: 20px; /* Adjust this value to control the distance from the left */
-  z-index: 1000; /* Ensure the dropdown appears above other content */
+  top: 50px;
+  left: 20px;
+  z-index: 1000;
+  /* Adjust the width to your desired value */
+  height: 90px;
+  width: 200px; /* Example width, you can adjust as needed */
 }
+
+
+
+/* Label styling */
+.label {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+  border-radius: 4px;
+  margin-top: 1rem; /* Adjust the margin-top value */
+  width: fit-content;
+  color: gray;
+}
+
+.label svg {
+  width: 16px; /* Adjust the icon size as needed */
+  height: 16px;
+  margin-right: 0.5rem; /* Add spacing between icon and text */
+}
+
+
+
+.status-icon {
+  font-size: 16px; /* Adjust the icon size as needed */
+  margin-right: 8px; /* Add some spacing between icon and text */
+}
+
+
+/* Color styles for different status icons */
+.status-icon.todo {
+  color: #33ff33; /* Set the color for Todo */
+}
+
+.status-icon.in-progress {
+  color: #ff0456; /* Set the color for In Progress */
+}
+
+.status-icon.backlog {
+  color: #3366FF; /* Set the color for Backlog */
+}
+
+
+
+.checkbox-and-content {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container {
+  flex-shrink: 0; /* Prevent checkbox from shrinking */
+  margin-right: 0.5rem;
+  margin-bottom: 3.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin: 0;
+}
+
+.checkbox-container .checkmark {
+  /* Your checkmark styles */
+}
+
+.content {
+  flex-grow: 1; /* Allow content to take remaining width */
+}
+
 
 
 

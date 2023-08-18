@@ -8,14 +8,14 @@ const GroupingOptions = ({ onChange }) => {
 
   return (
     <div className="grouping-options">
-      <label>
-        Group By:
-        <select onChange={handleOptionChange}>
-          <option value="status">Status</option>
-          <option value="user">User</option>
-          <option value="priority">Priority</option>
-        </select>
+      <label className="grouping-label">
+        Grouping
       </label>
+      <select onChange={handleOptionChange}>
+        <option value="status">Status</option>
+        <option value="user">User</option>
+        <option value="priority">Priority</option>
+      </select>
     </div>
   );
 }
