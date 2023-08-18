@@ -1,13 +1,110 @@
-body {
+/* src/styles.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Overall app layout */
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
+
+.app-header {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+}
+
+.app-content {
+  padding: 2rem;
+}
+
+/* Kanban board layout */
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card styling */
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 2rem; /* Increase the padding for more height */
+  border-radius: 8px; /* Increase the border-radius for a more curved appearance */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust the box-shadow */
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 1.5rem; /* Add margin between cards */
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Grouping and sorting options layout */
+.grouping-options,
+.sorting-options {
+  margin-bottom: 1.5rem;
+}
+
+/* Group label styling */
+.group-label {
+  margin-bottom: 1rem; /* Add margin below each group label */
+}
+
+/* Select input styling */
+select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Header styling */
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+/* Footer styling */
+footer {
+  margin-top: 2rem;
+  color: #777;
+}
+.options-button {
+  position: absolute;
+  top: 20px; /* Adjust this value to control the distance from the top */
+  left: 20px; /* Adjust this value to control the distance from the left */
+  z-index: 1000; /* Ensure the button appears above other content */
+  width: 100px; /* Adjust the width */
+  height: 30px; /* Adjust the height */
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+/* Style the dropdown options */
+.options-dropdown {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  position: absolute;
+  top: 50px; /* Adjust this value to control the distance from the top */
+  left: 20px; /* Adjust this value to control the distance from the left */
+  z-index: 1000; /* Ensure the dropdown appears above other content */
+}
+
+
+
+
+
+
+
+
+
+
+
